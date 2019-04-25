@@ -10,6 +10,7 @@
   width: 100%;
   align-items: stretch;
   justify-content: stretch;
+
   & > div {
     flex-grow: 1;
     width: 100%;
@@ -43,13 +44,43 @@
   display: block;
 } 
 
-.mega-menu__drop2 {
+.mega_menu__drop2 {
   padding: 0.5rem 1rem;
-  display: inline-block;
+  // display: inline-block;
   width: 300px;
 
   &:hover {
     background-color: #003366;
     color: white;
   }
+}
+
+.mega_menu__drop-down2 {
+  //  a bunch of properties
+  display: none;
+  position: absolute;
+  left: 220px;
+  top: 0;
+  right: 0;
+  height: 400px;
+  background-color: lightskyblue;
+}
+
+.mega_menu__drop2:hover .mega_menu__drop-down2 {
+  display: block;
+}
+
+.list {
+  display: flex;
+}
+
+.last-li a {
+  padding: 0.2rem 0.4rem;
+  text-decoration: none;
+  display: block;
+}
+
+.bold-link {
+  color: green;
+  font-weight: bold;
 }

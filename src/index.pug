@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title solving Mega Menu challenge
+    title Solving Mega Menu challenge
     link(href="style.css", rel="stylesheet")
   body
     .mega_menu
@@ -14,6 +14,17 @@ html(lang="en")
           .mega_menu__drop-down
             h2=menu.label
             ul
-              each menu2 in menu.secondMenuItemList
-                li.mega-menu__drop2
+              each menu2, key in menu.secondMenuItemList
+                li.mega_menu__drop2
                   span=menu2.label
+                  .mega_menu__drop-down2
+                    h3=menu2.label
+                    .list
+                    ul.list-1
+                      each item in menu2.list1
+                        li.last-li
+                          a(href=item.link, class=item.bold?'bold-link':'')=item.label
+                    ul.list-2
+                      each item in menu2.list2
+                        li.last-li
+                          a(href=item.link, class=item.bold?'bold-link':'')=item.label
